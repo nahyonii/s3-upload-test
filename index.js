@@ -107,6 +107,7 @@ app.post("/download", (req, res) => {
 
       /* 이미지가 S3에 등록될 때 생성되는 URL 주소 */
       imageUrl = `${s3.endpoint.href}${S3_BUCKET}/${itemKey}`;
+      console.log("s3 업로드 완료");
       return res.send({ imageUrl });
     });
   });
